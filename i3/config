@@ -192,7 +192,7 @@ bindsym $mod+m move workspace to output left
 bindsym $mod+Shift+period exec systemctl suspend
 
 # Keyboard layout
-exec_always "setxkbmap -model pc104 -layout ro -variant std"
+exec_always "setxkbmap -model pc104 -layout us,ro -variant ,std -option grp:win_space_toggle"
 
 # Notifications
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
