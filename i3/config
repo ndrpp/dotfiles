@@ -200,3 +200,6 @@ exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 # Screen lock
 bindsym $lock+l exec i3lock -i Pictures/mountains_4k.png -p default -n
 exec --no-startup-id xss-lock --transfer-sleep-lock -- $lock --nofork
+
+# Screen refresh rate
+exec_always --no-startup-id xrandr --output DP-2 --mode 1920x1080 --rate 239.76
