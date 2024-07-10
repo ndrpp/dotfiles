@@ -68,16 +68,11 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
-alias dynamo-local='java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb'
 
-alias google-chrome="google-chrome --password-store=kwallet5"
-alias hdmi-mirror="xrandr --output DP-3 --mode 1920x1080 --rate 239.76"
 alias where-java="java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.home'"
-alias uu="sudo pacman -Syu && yay -Syu"
+alias uu="sudo dnf update && sudo dnf upgrade"
 alias kssh="kitty +kitten ssh"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
-
-alias awslocal="AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test AWS_DEFAULT_REGION=${DEFAULT_REGION:-$AWS_DEFAULT_REGION} aws --endpoint-url=http://${LOCALSTACK_HOST:-localhost}:4566"
 
 xhost +local:root > /dev/null 2>&1
 
@@ -106,10 +101,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin"
 
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-21.0.3.0.9-1.fc40.x86_64"
 
-export EDITOR=vim
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH=$BUN_INSTALL/bin:$PATH
+export EDITOR=nvim
