@@ -201,6 +201,6 @@ bindsym $lock+l exec i3lock -i Pictures/garud-linux-wallpaper-138977226.png -p d
 exec --no-startup-id xss-lock --transfer-sleep-lock -- $lock --nofork
 
 # Screen refresh rate
-exec_always --no-startup-id xrandr --output DP-2 --mode 1920x1080 --rate 239.76
+exec_always --no-startup-id xrandr --output DP-1 --mode 1920x1080 --rate 239.76
 
 exec_always feh --bg-scale Pictures/garud-linux-wallpaper-138977226.jpg
