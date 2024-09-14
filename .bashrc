@@ -74,6 +74,8 @@ alias uu="sudo dnf update && sudo dnf upgrade"
 alias kssh="kitty +kitten ssh"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 
+alias vim="nvim"
+
 xhost +local:root > /dev/null 2>&1
 
 export HISTFILESIZE=10000
@@ -96,7 +98,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+eval "$(fzf --bash)"
 
 export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin"
 
