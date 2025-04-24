@@ -70,7 +70,7 @@ alias np='nano -w PKGBUILD'
 alias more=less
 
 alias where-java="java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.home'"
-alias uu="sudo dnf update && sudo dnf upgrade"
+alias uu="sudo pacman -Syu"
 alias kssh="kitty +kitten ssh"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 
@@ -106,3 +106,6 @@ export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-21.0.3.0.9-1.fc40.x86_64"
 
 export EDITOR=nvim
 . "$HOME/.cargo/env"
+
+export GOPATH="$HOME/go"
+export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
